@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: fluentd-test-ns
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fluentd-multiline-java
+  namespace: fluentd-test-ns
+  labels:
+    app: fluentd-multiline-java
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fluentd-multiline-java
+  template:
+    metadata:
+      labels:
+        app: fluentd-multiline-java
+    spec:
+      containers:
+        - name: fluentd-multiline-java
+          image: fluentd-multiline-java:latest
+          imagePullPolicy: IfNotPresent
