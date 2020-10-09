@@ -1,6 +1,13 @@
 # Fluentd multiline logging with Java (EFK stack) 
 ## The purpose
+The goal of this example project is to demonstrate a basic EFK setup 
+that supports multiline logs in a Kubernetes environment.
 
+The example comes with a fully functioning EFK setup and an
+example Java, Spring Boot based application that produces
+multiline logs and exception stacktraces.
+
+The relevant article can be found here: 
 
 ## Running the example
 Build the docker image and the application
@@ -19,3 +26,7 @@ Then deploy the EFK stack
 ```bash
 $ kubectl apply -f k8s/efk-stack.yaml
 ```
+In case of minikube, set up tunneling since Kibana is exposed
+via a LoadBalancer: `minikube tunnel`
+
+Then access Kibana at the external IP of the LoadBalancer and the 5601 port.
