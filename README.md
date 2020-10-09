@@ -3,11 +3,7 @@
 
 
 ## Running the example
-First of all the example Spring Boot application needs to be compiled
-```bash
-$ ./gradlew clean build
-```
-Then you have to build the docker image
+Build the docker image and the application
 ```bash
 $ docker build -t fluentd-multiline-java:latest .
 ```
