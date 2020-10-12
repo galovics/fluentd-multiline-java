@@ -7,7 +7,7 @@ The example comes with a fully functioning EFK setup and an
 example Java, Spring Boot based application that produces
 multiline logs and exception stacktraces.
 
-The relevant article can be found here: 
+The relevant article can be found here: https://arnoldgalovics.com/java-and-spring-boot-multiline-log-support-for-fluentd-efk-stack/
 
 ## Running the example
 Build the docker image and the application
